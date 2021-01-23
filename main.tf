@@ -158,7 +158,7 @@ resource "aws_s3_bucket_public_access_block" "origin" {
 
 module "logs" {
   source                   = "cloudposse/s3-log-storage/aws"
-  version                  = "0.15.0"
+  version                  = "0.17.0"
   enabled                  = var.logging_enabled
   context                  = module.this.context
   attributes               = compact(concat(module.this.attributes, var.extra_logs_attributes))
